@@ -5,7 +5,7 @@ namespace RoboAco.Events;
 //olha preco de compra, preco de venda, acima, abaixo, e ve se ta hora de comprar/vender
 public class CandleSticks : BaseWrapper
 {
-    protected CandleSticks(string name) : base(name)
+    public CandleSticks(string name) : base(name)
     {
         
     }

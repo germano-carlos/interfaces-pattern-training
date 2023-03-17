@@ -41,7 +41,7 @@ public static class CentralMonitoramento
             }
             finally
             {
-                //Thread.Sleep(TimeSpan.FromSeconds(1));
+                Thread.Sleep(TimeSpan.FromSeconds(10));
             }
         }
     }
