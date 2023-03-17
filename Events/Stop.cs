@@ -10,7 +10,6 @@ public class Stop : AlarmePrecoMedio
 
     public override void OnPriceChanged(string monitor, string ativo, double valor)
     {
-        CurrentStockPrice++;
         if (!(valor > CurrentStockPrice) && !(valor < CurrentStockPrice) && CurrentStockPrice is not null) return;
         
         Console.WriteLine($"O preço médio mudou de {CurrentStockPrice} para {valor}");
