@@ -39,10 +39,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "CMUtil": {
-              "target": "Package",
-              "version": "[1.2303.111.29, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
