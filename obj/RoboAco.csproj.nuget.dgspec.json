@@ -53,14 +53,6 @@
               "target": "Package",
               "version": "[2.1.0, )"
             },
-            "CMConnect.SDK": {
-              "target": "Package",
-              "version": "[1.2303.1317.40, )"
-            },
-            "CMUtil": {
-              "target": "Package",
-              "version": "[1.2303.111.29, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.13, )"
