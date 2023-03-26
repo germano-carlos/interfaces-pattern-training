@@ -19,7 +19,9 @@ public class AlarmePrecoMedio : BaseWrapper
     public override void OnPriceChanged(string monitor, string ativo, double valor)
     {
         if (!(valor > CurrentStockPrice) && !(valor < CurrentStockPrice) && CurrentStockPrice is not null) return;
+        //CurrentStockPrice++;
         
+        Logger.Logar($"[APM] - O ativo[{ativo}] teve seu preço médio alterado de {CurrentStockPrice} para {valor}", "onPriceChanged");
         Console.WriteLine($"O preço médio mudou de {CurrentStockPrice} para {valor}");
         CurrentStockPrice = valor;
     }

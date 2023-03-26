@@ -1,12 +1,14 @@
 ﻿using RoboAco.Classes.Controllers;
 using RoboAco.Classes.Interfaces;
+using RoboAco.Loggers;
 
 namespace RoboAco.Events;
 
-public class BaseWrapper : IEventos
+public abstract class BaseWrapper : IEventos
 {
     protected string StockName { get; set; }
     protected double? CurrentStockPrice { get; set; }
+    protected ILog Logger = new DBLog();
 
     protected BaseWrapper(string ativo)
     {
@@ -15,9 +17,5 @@ public class BaseWrapper : IEventos
         CentralEventos.Registry(StockName, this);
         CentralMonitoramento.AdicionarAtivoMonitorar(StockName);
     }
-
-    public virtual void OnPriceChanged(string monitor, string ativo, double valor)
-    {
-        throw new NotImplementedException();
-    }
+    public abstract void OnPriceChanged(string monitor, string ativo, double valor);
 }

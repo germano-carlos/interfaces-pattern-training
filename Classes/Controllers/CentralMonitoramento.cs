@@ -1,4 +1,8 @@
-﻿using RoboAco.Classes.Interfaces;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics.Internal;
+using RoboAco.Classes.Interfaces;
+using RoboAco.Loggers;
+using RoboAco.Model;
+using RoboAco.Model.NSLog;
 
 namespace RoboAco.Classes.Controllers;
 
@@ -8,6 +12,7 @@ public static class CentralMonitoramento
 {
     private static Dictionary<string, IBolsa> monitores = new();
     private static Thread thread = new (VerificaTodos);
+    private static ILog Logger = new DBLog();
 
     public static void Registry(IBolsa monitor)
     {
@@ -29,6 +34,8 @@ public static class CentralMonitoramento
 
     private static void VerificaTodos()
     {
+        RoboAcaoContext.ResetContext();
+        using var c = RoboAcaoContext.Get("SearchPrice");
         while (true)
         {
             try
@@ -41,6 +48,7 @@ public static class CentralMonitoramento
             }
             finally
             {
+                c.SaveChanges();
                 Thread.Sleep(TimeSpan.FromSeconds(10));
             }
         }

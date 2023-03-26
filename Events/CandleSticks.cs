@@ -16,15 +16,19 @@ public class CandleSticks : BaseWrapper
         CurrentStockPrice = valor;
         
         var rnd = new Random();
-        var randomValue = rnd.Next(0, 1);
+        var randomValue = rnd.Next(2);
+        
+        Logger.Logar($"[CS] - O ativo[{ativo}] teve seu preço médio alterado de {CurrentStockPrice} para {valor}", "onPriceChanged");
         
         switch (randomValue)
         {
             case 1:
+                Logger.Logar($"[CS] - Vendendo ações do ativo[{ativo}] à R$ {CurrentStockPrice}", "venda");
                 Console.WriteLine("O preço da ação esta superior ao valor máximo definido, vendendo ações");
                 CentralMonitoramento.Vender(monitor, StockName);
                 break;
             case 0:
+                Logger.Logar($"[CS] - Comprando ações do ativo[{ativo}] à R$ {CurrentStockPrice}", "compra");
                 Console.WriteLine("O preço da ação esta inferior ao valor mínimo definido, comprando ações");
                 CentralMonitoramento.Comprar(monitor, StockName);
                 break;
