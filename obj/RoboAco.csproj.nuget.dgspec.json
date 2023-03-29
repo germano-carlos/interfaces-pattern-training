@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\www\\interfaces-pattern-training\\RoboAco.csproj": {}
+    "C:\\Users\\germa\\RiderProjects\\RoboAcoes\\RoboAco.csproj": {}
   },
   "projects": {
-    "C:\\www\\interfaces-pattern-training\\RoboAco.csproj": {
+    "C:\\Users\\germa\\RiderProjects\\RoboAcoes\\RoboAco.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\www\\interfaces-pattern-training\\RoboAco.csproj",
+        "projectUniqueName": "C:\\Users\\germa\\RiderProjects\\RoboAcoes\\RoboAco.csproj",
         "projectName": "RoboAco",
-        "projectPath": "C:\\www\\interfaces-pattern-training\\RoboAco.csproj",
-        "packagesPath": "C:\\Users\\Carlos Germano\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\interfaces-pattern-training\\obj\\",
+        "projectPath": "C:\\Users\\germa\\RiderProjects\\RoboAcoes\\RoboAco.csproj",
+        "packagesPath": "C:\\Users\\germa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\germa\\RiderProjects\\RoboAcoes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Carlos Germano\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\germa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://www.myget.org/F/cmtecnologia/auth/f65b0375-9674-41e2-81f1-3024fedead90/api/v3/index.json": {}
         },
@@ -89,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
